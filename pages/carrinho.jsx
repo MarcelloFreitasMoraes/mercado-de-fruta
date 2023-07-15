@@ -6,6 +6,7 @@ import { CHECK } from '../src/config/api'
 
 export default function listProducts() {
     const [data, setData] = useState()
+    const [fruitsSelected, setFruitsSelected] = useState();
     const [del, setDel] = useState();
     
     useEffect(() => {
@@ -16,7 +17,7 @@ export default function listProducts() {
 
     return (
         <>
-            <Car data={data} del={del} setDel={setDel}/>
+            <Car data={data} del={fruitsSelected} fruitsSelected={fruitsSelected} setDel={setDel}setFruitsSelected={setFruitsSelected}/>
             <GoBack />
         </>
     )
